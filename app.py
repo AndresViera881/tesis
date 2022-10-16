@@ -55,7 +55,8 @@ from security import authenticate, identity
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = '035088966eda4454b5016d817708652a'
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:andresviera@localhost/flask_tesis_final"
+#app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:andresviera@localhost/flask_tesis_final"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://kjjixvizbshbqc:0af37376f4df41d43ced2f0190148db977e727776aea42d77c2af2eab41c0575@ec2-44-199-143-43.compute-1.amazonaws.com:5432/d2dlel21r1j8ac"
 engine = create_engine(app.config['SQLALCHEMY_DATABASE_URI'], pool_pre_ping=True, pool_size=30, max_overflow=120)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['PROPAGATE_EXCEPTIONS'] = True
