@@ -189,4 +189,4 @@ db = SQLAlchemy(app)
 if __name__ == "__main__":
     migrate.init_app(app, db)
     db.init_app(app)
-    app.run()
+    app.run(debug=True)
