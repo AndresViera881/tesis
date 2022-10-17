@@ -1,3 +1,1 @@
-web: gunicorn app:app --log-file - --log-level debug
-python app.py collectstatic --noinput
-app.py migrate
+web: gunicorn --bind 0.0.0.0:$PORT app:app
