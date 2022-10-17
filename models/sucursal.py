@@ -1,6 +1,5 @@
 from db import db
 
-
 class SucursalModel(db.Model):
     __tablename__ = "sucursal"
 
@@ -8,7 +7,6 @@ class SucursalModel(db.Model):
     nombre = db.Column(db.String(100), unique=True)
     direccion = db.Column(db.String(150))
     estado = db.Column(db.Boolean, default=True)
-
     paciente_ = db.relationship('PacienteModel', lazy='dynamic', viewonly=True)
     medico = db.relationship('MedicoModel', lazy='dynamic', viewonly=True)
 
